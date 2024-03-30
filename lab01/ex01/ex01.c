@@ -26,7 +26,7 @@ void text_to_binary(char* input_path, char* output_path){
     }
 
     Record record;
-    while (fscanf(input_file, "%d %ld %31s %31s %d\n",
+    while (fscanf(input_file, "%d %ld %31s %31s %d",
                   &record.identifier, &record.register_number,
                   record.surname, record.name, &record.exam_mark) == 5) {
         write(output_file, &record, sizeof(Record));
@@ -57,9 +57,9 @@ void binary_to_text(char* input_filename, char* output_filename){
 }
 
 int main(){
-    char* file_1_path = "data\\file_1.txt";
-    char* file_2_path = "data\\file_2.bin";
-    char* file_3_path = "data\\file_3.txt";
+    char* file_1_path = "..\\data\\file_1.txt";
+    char* file_2_path = "..\\data\\file_2.bin";
+    char* file_3_path = "..\\data\\file_3.txt";
 
     text_to_binary(file_1_path, file_2_path);
     binary_to_text(file_2_path, file_3_path);
