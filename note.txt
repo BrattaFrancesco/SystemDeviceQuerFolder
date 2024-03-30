@@ -1,0 +1,16 @@
+***************Read text file by string*********************
+    FILE *fp;
+    int fd;
+    char line[MAX_LENGHT], *result;
+
+    fp = fopen ("data\\file_1.txt", "r");
+    if(fp != NULL){
+        do{
+            result = fgets(line, MAX_LENGHT, fp);
+            printf ("%s", result);
+        }while(result != NULL);
+    }else{
+        printf("Error while reading the file!");
+    }
+    fclose (fp);
+**************************************************
