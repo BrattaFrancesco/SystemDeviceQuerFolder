@@ -57,9 +57,9 @@ void binary_to_text(char* input_filename, char* output_filename){
 }
 
 int main(){
-    char* file_1_path = "..\\data\\file_1.txt";
-    char* file_2_path = "..\\data\\file_2.bin";
-    char* file_3_path = "..\\data\\file_3.txt";
+    char* file_1_path = "lab01\\data\\file_1.txt";
+    char* file_2_path = "lab01\\data\\file_2.bin";
+    char* file_3_path = "lab01\\data\\file_3.txt";
 
     text_to_binary(file_1_path, file_2_path);
     binary_to_text(file_2_path, file_3_path);
